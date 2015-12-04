@@ -45,13 +45,15 @@ class Page(object):
 
     """Current page."""
 
-    def __init__(self, func, page):
+    def __init__(self, func, page, objects_per_page=None):
         """Intialize current page.
 
         :param func: Function for getting items.
         :param page: Requested page.
+        :param objects_per_page: Optional number of objects per page.
+            Defaults to current flask application config
         """
-        limit_per_page = current_app.config['OBJECTS_PER_PAGE']
+        limit_per_page = objects_per_page or current_app.config['OBJECTS_PER_PAGE']
 
         def get_response():
             return func(

@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Unreleased
+----------
+
+* generalize pagination so it can be used outside of the flask application (bubenkoff)
+
 1.2.4
 -----
 

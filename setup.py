@@ -26,7 +26,7 @@ for text_file in ['README.rst', 'CHANGES.rst']:
 install_requires = [
         "argparse>=1.2.1",
         "flask-script>=0.4.0",
-        "flask>=0.10.1",
+        "flask>=0.10.1,<0.11",
         "flask-cache",
         "halogen>=1.0.5",
         "python-memcached",

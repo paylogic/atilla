@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.2.6
+-----
+
+* Fix vnd_error_response returning a `Response` with wrong `Response.headers` type (youtux)
+* Require flask version < 0.11, otherwise atilla won't work.
+* Make a test pass also with the latest halogen version
+
+
 1.2.4
 -----
 

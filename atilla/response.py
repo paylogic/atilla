@@ -142,8 +142,7 @@ def vnd_error_response(exception, status_code=None, headers=None):
     if log_exception:
         current_app.logger.log(level, u"{type} {logref} {body}".format(body=body, **body), exc_info=exc_info)
 
-    response = make_response(json.dumps(body), status_code)
-    response.headers = all_headers
+    response = make_response(json.dumps(body), status_code, all_headers)
     return response
 
 
